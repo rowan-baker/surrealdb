@@ -296,7 +296,7 @@ jobs:
           echo "tag=${tag}" >> $GITHUB_OUTPUT
 
       - name: Build & Push builder image
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         id: build
         with:
           context: .

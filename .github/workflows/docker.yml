@@ -92,7 +92,7 @@ jobs:
           path: artifacts
 
       - name: Build Docker image (amd64)
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         id: build-amd64
         with:
           context: artifacts
@@ -105,7 +105,7 @@ jobs:
             ARTIFACT_PREFIX=surreal-${{ inputs.tag-prefix }}
 
       - name: Build Docker image (arm64)
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         id: build-arm64
         with:
           context: artifacts
@@ -144,7 +144,7 @@ jobs:
           fi
 
       - name: Push to DockerHub
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         if: ${{ inputs.push }}
         with:
           context: artifacts
@@ -173,7 +173,7 @@ jobs:
           severity: 'CRITICAL,HIGH'
 
       - name: Push to DockerHub (latest)
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         if: ${{ inputs.push && inputs.latest }}
         with:
           context: artifacts
