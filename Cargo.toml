@@ -121,7 +121,7 @@ rustls = { version = "0.23.12", default-features = false }
 # Sub dependency of the rustls dependency, should be updated whenever rustls is.
 # Defined so we can enable features on this dependency.
 rust_decimal = "1.36.0"
-rustls-pki-types = "1.7.0"
+rustls-pki-types = "1.12.0"
 rust-s3 = "0.35.1"
 # TODO: Look at dependency, 5 years old seems unmaintained.
 rust-stemmers = "1.2.0"
